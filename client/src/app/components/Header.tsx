@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { ITheme, UIContext } from "../context/UI/UIContext";
+import Link from "next/link";
+import { MenuIcon } from "../svg";
 
 const Header = () => {
   const { setIsSideBarOpen } = useContext(UIContext);
@@ -31,17 +33,22 @@ const Header = () => {
 
   return (
     <header className="fixed z-[999] dark:darkSecondaryText inset-0 h-[10%] dark:bg-darkSecondaryBg bg-white dark:darkBorder border-b-[1px] flex justify-between items-center max-sm:px-3 px-8">
-      <div className="flex gap-4">
-        <img
-          className="cursor-pointer lg:hidden "
+      <div className="h-full flex gap-4 items-center">
+        <div
           onClick={() => {
             setIsSideBarOpen((prev: boolean) => !prev);
           }}
-          src="MenuIcon.svg"
-          alt="menu"
-        />
-
-        <button>LOGO</button>
+          className="lg:hidden cursor-pointer"
+        >
+          <MenuIcon height="24" width="24" />
+        </div>
+        <Link href={"/"}>
+          <img
+            className="cursor-pointer flex-grow-0 max-h-[3rem]"
+            src="/Logo.png"
+            alt="logo"
+          />
+        </Link>
       </div>
       <div className="relative flex items-center max-md:hidden">
         <img

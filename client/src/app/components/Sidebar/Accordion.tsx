@@ -73,7 +73,9 @@ const Accordion: React.FC<IAccordion> = ({ navItems }) => {
             )}
             <p
               className={` ${
-                tags.every((path) => itm.tags.includes(path)) && "text-blue-600"
+                tags.length > 0 &&
+                tags.every((path) => itm.tags.includes(path)) &&
+                "text-blue-600"
               }`}
             >
               {itm.title}

@@ -19,7 +19,7 @@ const COLORS = ["#8884d8", "#D1CEFE", "#0B1B50"];
 
 const SalesByCategoryChart = () => {
   return (
-    <div className="flex-1 flex flex-col bg-white dark:darkPrimaryText dark:bg-darkSecondaryBg border-[1px] dark:darkBorder rounded-lg h-[50vh] p-6">
+    <div className="flex-1 flex flex-col bg-white dark:darkPrimaryText dark:bg-darkSecondaryBg border-[1px] dark:darkBorder rounded-lg h-[300px] p-6">
       <div>
         <h1 className="font-medium"> Sales by category </h1>
         <p className="text-xs font-medium dark:darkSecondaryText secondaryText">

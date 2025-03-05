@@ -51,16 +51,18 @@ const TrendCharts = ({ data, handleCurrentMetricChange }: ChartProps) => {
           </select>
         </span>
       </div>
-      <div className="w-full h-[40vh]">
+      <div className="w-full max-sm:h-[200px] h-[270px] -translate-x-[1.5rem]">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             data={data}
-            margin={{
-              top: 5,
-              right: 50,
-              left: 0,
-              bottom: 5,
-            }}
+            margin={
+              {
+                // top: 5,
+                // right: 50,
+                // left: 0,
+                // bottom: 5,
+              }
+            }
           >
             <defs>
               <linearGradient id="" x1="0" y1="0" x2="0" y2="1">

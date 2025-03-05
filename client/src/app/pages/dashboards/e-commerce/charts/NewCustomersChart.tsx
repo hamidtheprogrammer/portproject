@@ -21,20 +21,20 @@ const data = [
 
 const NewCustomersChart = () => {
   return (
-    <div className="flex-1 flex flex-col bg-white dark:darkPrimaryText dark:bg-darkSecondaryBg border-[1px] dark:darkBorder rounded-lg h-[50vh] p-6">
+    <div className="flex-1 flex flex-col bg-white dark:darkPrimaryText dark:bg-darkSecondaryBg border-[1px] dark:darkBorder rounded-lg h-[300px] p-6">
       <div className="flex flex-col">
         <h1 className="font-medium">New & returning customers </h1>
         <p className="text-xs font-medium dark:darkSecondaryText secondaryText">
           Last 7 days
         </p>
       </div>
-      <div className="flex-1 w-full text-xs">
+      <div className="flex-1 w-full text-xs -translate-x-[2.5rem]">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             width={730}
             height={250}
             data={data}
-            margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+            // margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
           >
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">

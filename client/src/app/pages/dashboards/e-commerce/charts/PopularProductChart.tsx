@@ -18,7 +18,7 @@ const data = [
 
 const PopularProductChart = () => {
   return (
-    <div className="flex-1 flex flex-col bg-white  dark:bg-darkSecondaryBg border-[1px] dark:darkBorder rounded-lg h-[50vh] p-6">
+    <div className="flex-1 flex flex-col bg-white gap-2  dark:bg-darkSecondaryBg border-[1px] dark:darkBorder rounded-lg h-[300px] p-6">
       <div className="flex flex-col items-start">
         <h1 className="font-medium dark:darkPrimaryText">Popular products</h1>
         <p className="text-xs font-medium dark:darkSecondaryText secondaryText">

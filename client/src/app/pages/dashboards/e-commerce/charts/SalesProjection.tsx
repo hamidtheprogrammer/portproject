@@ -24,19 +24,19 @@ const SalesProjection = () => {
   const { theme } = useContext(UIContext);
 
   return (
-    <div className=" flex flex-col bg-white dark:darkPrimaryText dark:bg-darkSecondaryBg border-[1px] dark:darkBorder rounded-lg h-[400px] p-6">
+    <div className=" flex flex-col gap-4 bg-white dark:darkPrimaryText dark:bg-darkSecondaryBg border-[1px] dark:darkBorder rounded-lg h-[400px] p-6">
       <div className="flex flex-col items-start">
         <h1 className="text-xl font-semibold">Sales projection vs actual</h1>
         <p className="text-xs font-medium dark:darkSecondaryText secondaryText">
           Last 7 days
         </p>
       </div>
-      <div className="flex-1 w-full flex justify-center text-xs">
+      <div className="flex-1 w-full flex justify-center text-xs -translate-x-[1.1rem]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             barSize={10}
             data={data}
-            margin={{ top: 40, right: 50, left: 0 }}
+            // margin={{ top: 40, right: 50, left: 0 }}
           >
             <XAxis dataKey="time" axisLine={false} tickLine={false} />
             <YAxis

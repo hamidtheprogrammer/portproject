@@ -11,7 +11,7 @@ import {
 
 const OrdersChart = () => {
   return (
-    <div className="flex flex-col bg-white dark:darkPrimaryText dark:bg-darkSecondaryBg border-[1px] dark:darkBorder rounded-lg h-[50vh] p-6">
+    <div className="flex flex-col bg-white dark:darkPrimaryText dark:bg-darkSecondaryBg border-[1px] dark:darkBorder rounded-lg h-[300px] p-6">
       <div className="flex justify-between items-start">
         <span>
           <h1 className="font-medium">
@@ -24,10 +24,10 @@ const OrdersChart = () => {
             Last 7 days
           </p>
         </span>
-        <h1 className="font-semibold text-xl ">194</h1>
+        <h1 className="font-semibold text-xl">194</h1>
       </div>
       <div className="flex-1 flex justify-center">
-        <ResponsiveContainer width={300} height="90%">
+        <ResponsiveContainer width={300} height="100%">
           <BarChart
             barGap={1}
             barSize={7}

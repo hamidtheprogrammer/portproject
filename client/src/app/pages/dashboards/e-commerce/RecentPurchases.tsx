@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { RecentPurchasesData } from "./seed";
 import Image from "next/image";
+import { products } from "../../e-commerce/admin/products";
 
 const RecentPurchases = () => {
   const [allowFilterChange, setAllowFilterChange] = useState(false);
@@ -63,24 +64,29 @@ const RecentPurchases = () => {
       </div>
       <div className="scrollBar overflow-x-auto">
         <ul className="flex font-semibold py-2 border-y-[1px] mt-5 min-w-[40rem]">
-          <li className="flex-1">Customer</li>
-          <li className="flex-1">Payment</li>
           <li className="flex-1">Product</li>
+          <li className="w-24">Payment</li>
+          <li className="flex-1">Customer</li>
           <li className="flex-1">Amount</li>
         </ul>
         <ul className="flex flex-col min-w-[40rem]">
-          {data.map((itm) => (
+          {data.map((itm, idx) => (
             <li
               className="flex items-center dark:darkBorder border-b-[1px] mt-5 pb-5"
               key={itm.customer}
             >
-              <span className="flex items-center gap-2 flex-1 font-semibold cursor-pointer">
-                <div className="flex justify-center primaryText text-lg items-center rounded-[9999] w-10 h-10 bg-blue-100">
-                  {itm.customer.split(" ")[0].substring(0, 1)}
-                </div>{" "}
-                <p className="hover:underline"> {itm.customer}</p>
+              <span className="flex gap-2 items-center flex-1 hover:underline cursor-pointer text-blue-800">
+                <Image
+                  src={products[idx].image}
+                  className="rounded-md border-[1px] dark:darkBorder w-10 h-10 gap-2"
+                  alt="product"
+                  width={20}
+                  height={20}
+                />
+                {itm.product}
               </span>
-              <span className={`flex-1 `}>
+
+              <span className={`w-24 `}>
                 <p
                   className={`flex-1 w-fit text-[0.7rem] rounded-full font-medium py-[0.04rem] px-[0.6rem] ${
                     itm.payment === "Pending"
@@ -91,17 +97,11 @@ const RecentPurchases = () => {
                   {itm.payment}
                 </p>
               </span>
-              <span className="flex gap-2 items-center flex-1 hover:underline cursor-pointer text-blue-800">
-                <Image
-                  src={
-                    "https://images.unsplash.com/photo-1560343090-f0409e92791a?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  }
-                  className="rounded-md border-[1px] dark:darkBorder w-10 h-10 gap-2"
-                  alt="product"
-                  width={20}
-                  height={20}
-                />
-                {itm.product}
+              <span className="flex items-center gap-2 flex-1 font-semibold cursor-pointer">
+                <div className="flex justify-center primaryText text-lg items-center rounded-[99px] w-10 h-10 bg-blue-100">
+                  {itm.customer.split(" ")[0].substring(0, 1)}
+                </div>{" "}
+                <p className="hover:underline"> {itm.customer}</p>
               </span>
               <span className="flex-1">${itm.amount}</span>
             </li>

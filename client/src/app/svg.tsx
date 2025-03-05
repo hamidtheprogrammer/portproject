@@ -459,6 +459,51 @@ export const LocationIcon2 = ({
   );
 };
 
+export const MenuIcon = ({
+  height,
+  width,
+  strokeWidth = 1,
+  color,
+}: {
+  height: string;
+  width: string;
+  strokeWidth?: number;
+  color?: string;
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 19 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`${color}`}
+    >
+      <line
+        y1="0.5"
+        x2="19"
+        y2="0.5"
+        stroke="black"
+        strokeWidth={strokeWidth}
+      />
+      <line
+        y1="7.5"
+        x2="19"
+        y2="7.5"
+        stroke="black"
+        strokeWidth={strokeWidth}
+      />
+      <line
+        y1="14.5"
+        x2="19"
+        y2="14.5"
+        stroke="black"
+        strokeWidth={strokeWidth}
+      />
+    </svg>
+  );
+};
+
 export const Icon = ({
   height,
   width,

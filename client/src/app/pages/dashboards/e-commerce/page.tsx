@@ -81,7 +81,7 @@ const Page: React.FC = () => {
   };
 
   return (
-    <div className="px-8 py-10 text primaryText ">
+    <div className="max-sm:px-3 px-8 py-10 text primaryText ">
       <div>
         <h1 className="text-4xl secondaryText dark:darkSecondaryText tracking-tighter">
           Good Morning,
