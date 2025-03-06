@@ -2,7 +2,7 @@ import React from "react";
 
 const FormHeader = () => {
   return (
-    <div className=" flex justify-between items-center dark:darkPrimaryText bg-white dark:bg-darkSecondaryBg h-20 border-b-[1px] md:px-8">
+    <div className="mt-1 flex justify-between items-center dark:darkPrimaryText bg-white dark:bg-darkSecondaryBg h-20 border-b-[1px] md:px-8 px-2">
       <div className="flex gap-1 items-center">
         <button className="row-span-2 shadow-[0_0_4px_rgba(0,0,0,0.1)] h-fit p-3 rounded-md">
           <img src="/ReturnIcon.svg" alt="return" />

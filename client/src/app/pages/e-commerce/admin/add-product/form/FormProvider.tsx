@@ -65,7 +65,7 @@ const Provider = () => {
     <FormProvider {...methods}>
       <form onSubmit={handleSubmit(submit)} action="">
         <FormHeader />
-        <div className="px-8 py-5 flex gap-8 max-md:flex-col">
+        <div className="px-2 md:px-8 py-5 flex gap-8 max-md:flex-col">
           <div className="space-y-5">
             <ProductImage />
             <Price_Variant />
