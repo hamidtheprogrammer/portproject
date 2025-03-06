@@ -2,20 +2,24 @@ import React from "react";
 
 const FormHeader = () => {
   return (
-    <div className="flex justify-between items-center dark:darkPrimaryText bg-white dark:bg-darkSecondaryBg py-4 border-b-[1px] md:px-8">
-      <div className="grid gap-2 grid-cols-[auto_1fr]">
-        <button className="row-span-2 shadow-[0_0_4px_rgba(0,0,0,0.1)] h-fit self-center p-3 rounded-md">
+    <div className=" flex justify-between items-center dark:darkPrimaryText bg-white dark:bg-darkSecondaryBg h-20 border-b-[1px] md:px-8">
+      <div className="flex gap-1 items-center">
+        <button className="row-span-2 shadow-[0_0_4px_rgba(0,0,0,0.1)] h-fit p-3 rounded-md">
           <img src="/ReturnIcon.svg" alt="return" />
         </button>
-        <p className="relative top-1 text-xs secondaryText dark:darkSecondaryText">
-          Back to list
-        </p>
-        <h1 className="font-semibold">Add New Product</h1>
+        <span>
+          <p className="relative top-1 text-xs secondaryText dark:darkSecondaryText">
+            Back to list
+          </p>
+          <h1 className="font-semibold text-black max-sm:text-sm">
+            Add New Product
+          </h1>
+        </span>
       </div>
-      <div className="space-x-3">
+      <div className="flex gap-2 items-center">
         <button
           type="button"
-          className="border-[1px] rounded-md hover:bg-gray-100 px-3 py-2 dark:darkBorder text-xs"
+          className="border-[1px] rounded-md hover:bg-gray-100 px-3 py-2 dark:darkBorder text-xs text-black"
         >
           Save to Draft
         </button>

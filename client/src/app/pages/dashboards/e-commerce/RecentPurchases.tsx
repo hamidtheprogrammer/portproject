@@ -49,7 +49,7 @@ const RecentPurchases = () => {
         <h1 className="font-medium text-lg">Recent purchases</h1>
         <div className="relative flex items-center ">
           <img
-            className="text-xs absolute opacity-30 w-4 aspect-square ml-3"
+            className="absolute opacity-30 w-4 aspect-square ml-3"
             src="/SearchIcon.svg"
             alt="search"
           />

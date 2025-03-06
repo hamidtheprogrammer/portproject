@@ -164,7 +164,7 @@ const Page: React.FC = () => {
         <RecentPurchases />
         <SalesProjection />
         <SalesByRegion />
-        {/* <SalesMap /> */}
+        <SalesMap />
       </div>
     </div>
   );

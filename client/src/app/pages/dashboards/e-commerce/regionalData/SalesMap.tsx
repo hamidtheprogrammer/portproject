@@ -1,6 +1,5 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
-import { ITheme, UIContext } from "@/app/context/UI/UIContext";
+import React, { useEffect } from "react";
 import { orderByRegionData } from "../seed";
 import dynamic from "next/dynamic";
 
@@ -24,22 +23,20 @@ const DynamicPopup = dynamic(
   { ssr: false }
 );
 
-const [customIcon, setCustomIcon] = useState(null);
-useEffect(() => {
-  const L = require("leaflet");
-  setCustomIcon(
-    new L.Icon({
-      iconUrl: "/LocationIcon.png",
-      iconSize: [20, 35],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-    })
-  );
-}, []);
+// const [customIcon, setCustomIcon] = useState();
+// useEffect(() => {
+//   const L = require("leaflet");
+//   setCustomIcon(
+//     new L.Icon({
+//       iconUrl: "/LocationIcon.png",
+//       iconSize: [20, 35],
+//       iconAnchor: [12, 41],
+//       popupAnchor: [1, -34],
+//     })
+//   );
+// }, []);
 
 const SalesMap = () => {
-  const { theme } = useContext(UIContext);
-
   return (
     <div className="md:col-span-2">
       <div className="text-center my-7 space-y-4">
@@ -50,7 +47,7 @@ const SalesMap = () => {
           Last 7 days
         </p>
       </div>
-      {typeof window !== "undefined" && customIcon && (
+      {typeof window !== "undefined" && (
         <DynamicMapContainer
           center={[20, 0]}
           zoom={2}
@@ -63,18 +60,14 @@ const SalesMap = () => {
         >
           {/* Tile Layer */}
           <DynamicTileLayer
-            url={
-              theme === ITheme.LIGHT
-                ? "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                : "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-            }
+            url={"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"}
           />
 
           {/* Clustering */}
 
           {orderByRegionData.map((order, index) => (
             <DynamicMarker
-              icon={customIcon}
+              // icon={customIcon}
               key={index}
               position={[order.lat, order.lng]}
             >

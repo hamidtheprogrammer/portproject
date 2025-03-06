@@ -28,7 +28,7 @@ const NewCustomersChart = () => {
           Last 7 days
         </p>
       </div>
-      <div className="flex-1 w-full text-xs -translate-x-[2.5rem]">
+      <div className="flex-1 w-full text-xs -translate-x-[2rem]">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             width={730}

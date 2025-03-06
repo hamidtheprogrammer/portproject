@@ -28,10 +28,10 @@ const ProductImage = () => {
 
   return (
     <div className="md:w-72 h-fit pb-10 bg-white dark:darkPrimaryText dark:bg-darkSecondaryBg border-[1px] dark:darkBorder rounded-lg">
-      <div className="text-sm font-medium py-2 px-3 border-b-[1px] dark:darkBorder">
+      <div className="text-sm text-black font-medium py-2 px-3 border-b-[1px] dark:darkBorder">
         Product Image
       </div>
-      <div className="p-3 flex flex-col">
+      <div className="p-3 flex flex-col text-black">
         <label htmlFor="images" className="text-xs mb-4">
           Images
         </label>

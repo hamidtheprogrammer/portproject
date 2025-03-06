@@ -23,13 +23,17 @@ const CategoryInventory = () => {
   return (
     <div className="flex gap-10 max-sm:flex-col">
       <span className="flex flex-col flex-1 gap-1">
-        <label htmlFor="category" className="dark:darkPrimaryText font-medium">
+        <label
+          htmlFor="category"
+          className="dark:darkPrimaryText text-black font-medium"
+        >
           Category
         </label>
         <select
           {...register("category")}
-          className="focus:outline-none focus:ring-2 focus:ring-blue-300 text-xs dark:darkSecondaryText dark:bg-darkSecondaryBg  border-[1px] dark:darkBorder p-2  rounded-md"
+          className="focus:outline-none focus:ring-2 focus:ring-blue-300 text-black dark:darkSecondaryText dark:bg-darkSecondaryBg  border-[1px] dark:darkBorder p-2  rounded-md"
         >
+          <option value="">category</option>
           {categories.map((category) => (
             <option key={category} value={category}>
               {category}
@@ -43,12 +47,15 @@ const CategoryInventory = () => {
         )}
       </span>
       <span className="flex flex-col flex-1 gap-1">
-        <label htmlFor="quantity" className="dark:darkPrimaryText font-medium">
+        <label
+          htmlFor="quantity"
+          className="dark:darkPrimaryText font-medium text-black"
+        >
           Quantity
         </label>
         <input
           {...register("quantity")}
-          className="focus:outline-none focus:ring-2 focus:ring-blue-300 text-xs dark:darkSecondaryText dark:bg-darkSecondaryBg  border-[1px] dark:darkBorder p-2  rounded-md"
+          className="focus:outline-none focus:ring-2 focus:ring-blue-300 text-black dark:darkSecondaryText dark:bg-darkSecondaryBg  border-[1px] dark:darkBorder p-2  rounded-md"
           type="number"
         />
         {errors.quantity && (

@@ -17,7 +17,10 @@ const Price_Variant = () => {
   return (
     <div className="space-y-7">
       <span className="flex flex-col flex-1 gap-1">
-        <label htmlFor="price" className="font-medium dark:darkPrimaryText">
+        <label
+          htmlFor="price"
+          className="text-black font-medium dark:darkPrimaryText"
+        >
           Price
         </label>
         <div className="relative flex items-center">
@@ -26,7 +29,7 @@ const Price_Variant = () => {
           </span>
           <input
             {...register("price")}
-            className="pl-9 w-full focus:outline-none focus:ring-2 focus:ring-blue-300 text-xs dark:darkSecondaryText dark:bg-darkSecondaryBg  border-[1px] dark:darkBorder p-2  rounded-md"
+            className="pl-9 w-full text-black focus:outline-none focus:ring-2 focus:ring-blue-300 dark:darkSecondaryText dark:bg-darkSecondaryBg  border-[1px] dark:darkBorder p-2  rounded-md"
             type="number"
           />
         </div>
@@ -55,7 +58,7 @@ const Price_Variant = () => {
               </label>
               <input
                 {...register(`variants[${index}]`)}
-                className="focus:outline-none focus:ring-2 focus:ring-blue-300 text-xs dark:darkSecondaryText dark:bg-darkSecondaryBg  border-[1px] dark:darkBorder p-2  rounded-md"
+                className="focus:outline-none focus:ring-2 focus:ring-blue-300 text-black dark:darkSecondaryText dark:bg-darkSecondaryBg  border-[1px] dark:darkBorder p-2  rounded-md"
                 type="text"
               />
               {Array.isArray(errors.variants) && errors.variants[index] && (

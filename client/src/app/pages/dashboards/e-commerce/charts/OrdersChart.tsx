@@ -32,7 +32,7 @@ const OrdersChart = () => {
             barGap={1}
             barSize={7}
             data={ordersChartData}
-            margin={{ top: 20, right: 100, left: 0, bottom: 5 }}
+            margin={{ top: 20, right: 80, left: 20, bottom: 5 }}
           >
             <XAxis dataKey="time" axisLine={false} tick={false} />
             <YAxis tick={false} axisLine={false} />

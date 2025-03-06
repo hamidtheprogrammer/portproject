@@ -16,7 +16,7 @@ const Description = () => {
         <input
           {...register("title")}
           type="text"
-          className="focus:outline-none focus:ring-2 focus:ring-blue-300 text-xs dark:darkSecondaryText dark:bg-darkSecondaryBg h-9 border-[1px] dark:darkBorder px-2 rounded-md"
+          className="focus:outline-none focus:ring-2 focus:ring-blue-300 text-black dark:darkSecondaryText dark:bg-darkSecondaryBg h-9 border-[1px] dark:darkBorder px-2 rounded-md"
           placeholder="Enter product name..."
         />
         {errors.title && (
@@ -31,7 +31,7 @@ const Description = () => {
         </label>
         <textarea
           {...register("description")}
-          className="focus:outline-none focus:ring-2 focus:ring-blue-300 text-xs dark:darkSecondaryText dark:bg-darkSecondaryBg h-40 border-[1px] dark:darkBorder p-2  rounded-md"
+          className="focus:outline-none focus:ring-2 focus:ring-blue-300 text-black dark:darkSecondaryText dark:bg-darkSecondaryBg h-40 border-[1px] dark:darkBorder p-2  rounded-md"
           placeholder="Enter product name..."
         />
         {errors.description && (
