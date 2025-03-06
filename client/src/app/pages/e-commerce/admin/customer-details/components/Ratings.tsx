@@ -147,7 +147,7 @@ const Ratings = () => {
   useEffect(() => setCurrentPage(pagination.pageNumber), [pagination]);
 
   return (
-    <section className="p-8 max-sm:p-3">
+    <section className="absolute w-full p-8 max-sm:p-3">
       <h1 className="flex font-semibold text-2xl mb-5">
         Ratings & reviews <p className="font-normal text-black/50">(10)</p>
       </h1>

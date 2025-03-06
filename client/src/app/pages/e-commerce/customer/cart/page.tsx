@@ -23,7 +23,7 @@ const page = () => {
         </a>
         <h1 className="font-bold text-2xl mt-2 mb-6">Cart</h1>
         <div className="flex justify-between max-lg:flex-col max-lg:gap-5">
-          <span className="overflow-y-auto scrollBar">
+          <span className="overflow-x-auto scrollBar">
             <ul className="text-xs flex gap-3 text-center font-semibold mb-4 w-fit">
               <li className="w-60">NAME</li>
               <li className="w-16">COLOR</li>

@@ -29,9 +29,9 @@ export default function RootLayout({
       >
         <UIContextProvider>
           <Header />
-          <main className="w-full flex overflow-x-hiddens">
+          <main className="w-full flex">
             <Sidebar />
-            <section className="lg:ml-[15.5rem] mt-14 max-sm:mt-12 flex-1">
+            <section className="relative lg:ml-[15.5rem] mt-14 max-sm:mt-12 flex-1">
               {children}
             </section>
           </main>

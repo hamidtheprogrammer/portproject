@@ -144,13 +144,13 @@ const Orders = () => {
   useEffect(() => setCurrentPage(pagination.pageNumber), [pagination]);
 
   return (
-    <section className="p-8 max-sm:p-3">
+    <section className="p-8 absolute w-full max-sm:p-3">
       <h1 className="flex font-semibold text-2xl mb-5">
         Orders <p className="font-normal text-black/50">(10)</p>
       </h1>
       <div className="text-xs overflow-x-auto dark:darkPrimaryText dark:bg-darkSecondaryBg border-t-[1px] dark:darkBorder">
         <div className="min-w-[50rem]">
-          <ul className="flex gap-2 font-semibold py-3 border-b-[1px]">
+          <ul className="flex gap-2 font-semibold py-3 border-b-[1px] text-nowrap">
             <li
               onClick={() => handleSortParameterChanged("product")}
               className="flex-1 flex gap-1 items-center"

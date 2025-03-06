@@ -10,7 +10,7 @@ const nav = ["Overview", "Orders", "Ratings & reviews"];
 const page = () => {
   const [currentModal, setCurrentModal] = useState<string>("Overview");
   return (
-    <section>
+    <section className="relative">
       <div className="flex flex-col gap-5 pt-5 px-8 max-sm:px-3 bg-white">
         <span className="flex items-center text-sm font-medium gap-2">
           <HomeIcon height="15" width="15" />

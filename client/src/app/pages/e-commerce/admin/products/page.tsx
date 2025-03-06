@@ -145,7 +145,7 @@ const Products = () => {
   useEffect(() => setCurrentPage(pagination.pageNumber), [pagination]);
 
   return (
-    <section className="w-full">
+    <section className="absolute w-full">
       <div className="px-8 py-5">
         <span className="flex items-center text-sm font-medium gap-2">
           <HomeIcon height="15" width="15" />
@@ -168,16 +168,6 @@ const Products = () => {
               placeholder="Search by product name..."
             />
           </div>
-          <select
-            name=""
-            id=""
-            className="w-56 h-8 outline-none border-[1px] rounded-md text-xs font-medium px-2"
-          >
-            <option value="All">All</option>
-            <option value="Electronics">Electronics</option>
-            <option value="Gaming">Gaming</option>
-            <option value="Home Appliances">Home Appliances</option>
-          </select>
         </div>
         <Link href={"/pages/e-commerce/admin/add-product"}>
           <button className="text-xs mt-4 h-9 rounded-lg w-40 bg-blueish text-white hover:opacity-70">
@@ -186,8 +176,8 @@ const Products = () => {
         </Link>
       </div>
       <div className="text-xs overflow-x-auto bg-white dark:darkPrimaryText dark:bg-darkSecondaryBg border-t-[1px] dark:darkBorder px-8">
-        <div className="min-w-[50rem]">
-          <ul className="flex gap-2 font-semibold py-3 border-b-[1px]">
+        <div className="min-w-[55rem]">
+          <ul className="flex gap-2 font-semibold py-3 border-b-[1px] text-nowrap">
             <li
               onClick={() => handleSortParameterChanged("product")}
               className="flex-1 min-w-52 flex gap-1 items-center cursor-pointer"
