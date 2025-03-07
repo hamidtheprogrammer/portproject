@@ -8,7 +8,7 @@ enum IModal {
 }
 
 const MoreDetails = () => {
-  const [currentModal, setCurrentModal] = useState<IModal>(IModal.REVIEWS);
+  const [currentModal, setCurrentModal] = useState<IModal>(IModal.DESCRIPTION);
   return (
     <div className="flex max-md:flex-col gap-1 mt-20">
       <span className="flex-1">

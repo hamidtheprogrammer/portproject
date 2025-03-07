@@ -14,7 +14,7 @@ const Main = () => {
     <div
       className={` ${
         isFullScreen && "fixed inset-0 overflow-y-auto w-full z-[99999]"
-      } bg-primaryBg flex flex-col justify-between`}
+      } bg-primaryBg `}
     >
       <div
         className={`${

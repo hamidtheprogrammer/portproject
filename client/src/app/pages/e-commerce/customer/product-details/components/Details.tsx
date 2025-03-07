@@ -19,13 +19,13 @@ const Details = () => {
 
   return (
     <div className="relative flex max-lg:flex-col py-5 gap-9 w-full">
-      <div className="flex flex-1 h-fit lg:sticky lg:self-start lg:top-16">
-        <ul className="flex max-w-24 flex-col gap-4">
+      <div className="flex max-md:flex-col flex-1 h-fit lg:sticky lg:self-start lg:top-16">
+        <ul className="flex max-md:w-full md:max-w-24 max-md:order-2 md:flex-col gap-4">
           {imgList.map((img, idx) => (
             <li
               onClick={() => handleOffsetChange(idx)}
               key={img}
-              className={`relative w-full border-[1px] rounded-lg p-5 aspect-square min-w-full cursor-pointer ${
+              className={`relative max-md:w-1/4 w-full border-[1px] rounded-lg p-5 aspect-square md:min-w-full cursor-pointer ${
                 offset / 100 === idx && "border-[#8884d8]"
               }`}
             >

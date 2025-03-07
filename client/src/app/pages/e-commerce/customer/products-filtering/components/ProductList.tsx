@@ -9,6 +9,7 @@ import {
 import { useContext } from "react";
 import { ProductContext } from "../ProductContext";
 import { IProduct } from "..";
+import Link from "next/link";
 
 enum Isort {
   POPULAR = "most_popular",
@@ -55,7 +56,7 @@ const ProductList = () => {
 
   return (
     <section className="flex flex-col gap-5 flex-1">
-      <div className="flex justify-between">
+      <div className="flex max-product_md:flex-col max-product_md:gap-4 justify-between">
         <select
           name="sort"
           className="text-sm h-12 border-[1px] dark:darkBorder rounded-md w-56 px-2"
@@ -73,51 +74,69 @@ const ProductList = () => {
         </button>
       </div>
       <h1 className="text-2xl font-medium">Showing 150 results</h1>
-      <ul className="grid grid-cols-3 max-product_semilg:grid-cols-2 max-product_md:grid-cols-1 gap-9 ">
+      <ul className="grid grid-cols-3 max-product_semilg:grid-cols-1  gap-9 mx-auto">
         {product &&
           product.map((product, idx) => (
             <li
               key={idx}
-              className="w-[17rem] bg-white flex flex-col justify-between py-5 px-4 rounded-xl group cursor-pointer"
+              className="w-[17rem] max-product_semilg:w-full bg-white  py-5 px-4 rounded-xl group cursor-pointer"
             >
               <HeartIcon width="20" height="20" />
-              <img
-                src={product.image}
-                alt="image"
-                className="w-full aspect-square object-cover"
-              />
-              <h1 className="group-hover:underline mt-10">{product.title}</h1>
-              <div className="flex text-xs gap-5 items-center mt-7">
-                <ul className="flex">
-                  {Array.from({ length: Number(product.rating) }).map(
-                    (_, idx) => (
-                      <li key={idx}>
-                        <StarIcon height="15" width="15" />
-                      </li>
-                    )
-                  )}
-                  <p className="font-medium">{product.rating}/5</p>
-                </ul>
-                <p>{product.reviews.toLocaleString()} reviews</p>
-              </div>
-              <h1 className="text-lg flex items-baseline gap-4 mt-4 font-semibold">
-                ${product.price}
-                <p className="text-xs font-bold text-[#EE0B4F]">
-                  Save ${(product.price * 0.08).toFixed(2)}
-                </p>
-              </h1>
-              <p className="text-xs mt-1">
-                From <b>${(product.price * 0.009).toFixed(2)}</b> per month for
-                36 months
-              </p>
-              <div className="flex flex-col gap-4 text-sm p-2 py-3 mt-3 bg-slate-100 rounded-md">
-                <span className="flex gap-2 items-center">
-                  <DeliveryIcon width="15" height="15" /> Delivery available
-                </span>
-                <span className="flex gap-2 items-center">
-                  <StoreIcon width="15" height="15" /> In-store collection
-                  available
-                </span>
+              <div className="flex gap-3 max-sm:flex-col product_semilg:flex-col">
+                <Link href="/pages/e-commerce/customer/product-details">
+                  <div className="product_semilg:w-full max-xs:w-full max-xs:h-[14rem] mx-auto aspect-square max-product_semilg:w-[10rem] max-product_semilg:h-[10rem]">
+                    <img
+                      src={product.image}
+                      alt="image"
+                      className=" object-cover"
+                    />
+                  </div>
+                </Link>
+                <div className="flex-1">
+                  <Link href="/pages/e-commerce/customer/product-details">
+                    <h1 className="group-hover:underline ">{product.title}</h1>
+                  </Link>
+                  <div className="flex text-xs gap-5 items-center mt-7">
+                    <ul className="flex">
+                      {Array.from({ length: Number(product.rating) }).map(
+                        (_, idx) => (
+                          <li key={idx}>
+                            <StarIcon height="15" width="15" />
+                          </li>
+                        )
+                      )}
+                      <p className="font-medium">{product.rating}/5</p>
+                    </ul>
+                    <p>{product.reviews.toLocaleString()} reviews</p>
+                  </div>
+                  <h1 className="text-lg flex items-baseline gap-4 mt-4 font-semibold">
+                    ${product.price}
+                    <p className="text-xs font-bold text-[#EE0B4F]">
+                      Save ${(product.price * 0.08).toFixed(2)}
+                    </p>
+                  </h1>
+                  <p className="text-xs mt-1">
+                    From <b>${(product.price * 0.009).toFixed(2)}</b> per month
+                    for 36 months
+                  </p>
+                  <div className="flex flex-col gap-4 text-sm p-2 py-3 mt-3 bg-slate-100 rounded-md">
+                    <span className="flex gap-2 items-center">
+                      <DeliveryIcon width="15" height="15" /> Delivery available
+                    </span>
+                    <span className="flex gap-2 items-center">
+                      <StoreIcon width="15" height="15" /> In-store collection
+                      available
+                    </span>
+                  </div>
+                  <div className="mt-4 flex flex-col gap-4 max-product_lg:hidden">
+                    <button className="text-sm h-8 rounded-lg w-full border-[#4039be] text-[#4039be] border-[1px] hover:first-line:opacity-70">
+                      View product
+                    </button>
+                    <button className="text-sm h-8 rounded-lg w-full bg-[#4039be] text-white hover:opacity-70">
+                      Add to basket
+                    </button>
+                  </div>
+                </div>
               </div>
               <div className="mt-4 flex flex-col gap-4">
                 <button className="text-sm h-8 rounded-lg w-full border-[#4039be] text-[#4039be] border-[1px] hover:first-line:opacity-70">

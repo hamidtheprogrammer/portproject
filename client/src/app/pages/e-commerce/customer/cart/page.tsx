@@ -11,7 +11,7 @@ const page = () => {
     .reduce((total, current, idx) => total + current.price * (idx + 1), 0);
   return (
     <div
-      className={`fixed inset-0 overflow-y-auto w-full z-[99999] bg-primaryBg flex flex-col justify-between`}
+      className={`fixed inset-0 overflow-y-auto w-full z-[99999] bg-primaryBg justify-between`}
     >
       <Header />
       <main className="flex-1 px-3 md:px-16 py-8 mb-20">

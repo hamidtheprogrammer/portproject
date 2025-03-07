@@ -6,6 +6,7 @@ import {
   MenuIcon,
   UserIcon,
 } from "@/app/svg";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -23,7 +24,7 @@ const Header = () => {
   const [isLeftNavOpen, setIsLeftBarOpen] = useState<boolean>(false);
 
   return (
-    <header className="dark:darkSecondaryText inset-0 dark:bg-darkSecondaryBg bg-white dark:darkBorder border-b-[1px] flex flex-col gap-3 justify-center  h-32 px-3 sm:px-8">
+    <header className="dark:darkSecondaryText inset-0 dark:bg-darkSecondaryBg bg-white dark:darkBorder border-b-[1px] flex flex-col gap-3 justify-center md:h-20 lg:h-32 h-32 px-3 sm:px-8">
       <div className="flex justify-between items-center w-full">
         <div className="flex gap-6 items-end">
           <div className="flex gap-4">
@@ -109,10 +110,13 @@ const Header = () => {
             />
             Stores
           </span>
-          <span className="text-xs flex flex-col items-center h-10 gap-1 justify-between">
-            <BasketIcon height="25" width="25" strokeWidth={5} />
-            Basket
-          </span>
+          <Link href={"/pages/e-commerce/customer/cart"}>
+            {" "}
+            <span className="text-xs flex flex-col items-center h-10 gap-1 justify-between">
+              <BasketIcon height="25" width="25" strokeWidth={5} />
+              Basket
+            </span>
+          </Link>
           <span className="text-xs flex flex-col items-center h-10 gap-1 justify-between">
             <UserIcon height="20" width="20" strokeWidth={1} />
             Account

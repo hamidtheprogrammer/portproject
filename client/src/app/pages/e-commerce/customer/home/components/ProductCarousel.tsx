@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { IProduct } from "../../products-filtering";
 import { StarIcon } from "@/app/svg";
 import { IDirection } from "@/app/pages/travel/portfolio/components/Hero";
+import { useRouter } from "next/navigation";
 
 const ProductCarousel = ({ products }: { products: IProduct[] }) => {
   const carousel = useRef<HTMLUListElement>(null);
@@ -20,6 +21,7 @@ const ProductCarousel = ({ products }: { products: IProduct[] }) => {
         break;
     }
   }
+  const router = useRouter();
 
   useEffect(() => {
     function homeSize() {
@@ -58,9 +60,12 @@ const ProductCarousel = ({ products }: { products: IProduct[] }) => {
       >
         {products.map((prod, idx) => (
           <li
+            onClick={() =>
+              router.push("/pages/e-commerce/customer/product-details")
+            }
             style={{ transform: `translateX(${offset * 100}%)` }}
             key={prod.title}
-            className={`relative max-sm:w-[calc(100%+1.5rem)] sm:w-[calc(50%+0.75rem)] md:w-[calc(33.333%+0.5rem)] lg:w-[calc(25%+0.375rem)] flex-shrink-0 flex-grow-0 transition-all duration-500 product-itm h-[20rem] ${
+            className={`cursor-pointer relative max-sm:w-[calc(100%+1.5rem)] sm:w-[calc(50%+0.75rem)] md:w-[calc(33.333%+0.5rem)] lg:w-[calc(25%+0.375rem)] flex-shrink-0 flex-grow-0 transition-all duration-500 product-itm h-[20rem] ${
               idx !== products.length - 1
             } pr-6`}
           >

@@ -3,6 +3,7 @@ import Header from "../products-filtering/components/Header";
 import ProductCarousel from "./components/ProductCarousel";
 import { productsSeed } from "../products-filtering";
 import Footer from "../products-filtering/components/Footer";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -24,9 +25,12 @@ const page = () => {
               aut! Laboriosam, blanditiis sit, perferendis repellendus
               obcaecati.
             </p>
-            <button className="underline_button relative w-fit font-medium z-[2]">
+            <Link
+              href={"/pages/e-commerce/customer/products-filtering"}
+              className="underline_button relative w-fit font-medium z-[2]"
+            >
               SHOP NOW
-            </button>
+            </Link>
             <img
               src="/SonyhpBanner.png"
               alt="Banner image"
@@ -108,9 +112,11 @@ const page = () => {
             <h1 className="underline_heading relative w-fit pb-3 text-2xl font-medium">
               Top deals
             </h1>
-            <p className="text-blue-500 font-medium hover:underline cursor-pointer">
-              Explore {">"}
-            </p>
+            <Link href={"/pages/e-commerce/customer/products-filtering"}>
+              <p className="text-blue-500 font-medium hover:underline cursor-pointer">
+                Explore {">"}
+              </p>
+            </Link>
           </span>
           <ProductCarousel products={productsSeed} />
         </div>
@@ -119,9 +125,11 @@ const page = () => {
             <h1 className="underline_heading relative w-fit pb-3 text-2xl font-medium">
               Best Offers
             </h1>
-            <p className="text-blue-500 font-medium hover:underline cursor-pointer">
-              Explore {">"}
-            </p>
+            <Link href={"/pages/e-commerce/customer/products-filtering"}>
+              <p className="text-blue-500 font-medium hover:underline cursor-pointer">
+                Explore {">"}
+              </p>
+            </Link>
           </span>
           <ProductCarousel products={[...productsSeed.reverse()]} />
         </div>
@@ -130,9 +138,11 @@ const page = () => {
             <h1 className="underline_heading relative w-fit pb-3 text-2xl font-medium">
               Popular
             </h1>
-            <p className="text-blue-500 font-medium hover:underline cursor-pointer">
-              Explore {">"}
-            </p>
+            <Link href={"/pages/e-commerce/customer/products-filtering"}>
+              <p className="text-blue-500 font-medium hover:underline cursor-pointer">
+                Explore {">"}
+              </p>
+            </Link>
           </span>
           <ProductCarousel products={[...productsSeed.reverse()]} />
         </div>
