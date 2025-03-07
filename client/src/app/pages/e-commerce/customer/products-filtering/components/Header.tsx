@@ -16,9 +16,6 @@ const Header = () => {
   const path = usePathname().split("/");
   const [isLeftNavOpen, setIsLeftBarOpen] = useState<boolean>(false);
 
-  useEffect(() => {
-    console.log(path);
-  }, []);
   return (
     <header className="dark:darkSecondaryText inset-0 dark:bg-darkSecondaryBg bg-white dark:darkBorder border-b-[1px] flex justify-between items-center py-5 px-8">
       <div className="flex gap-4">

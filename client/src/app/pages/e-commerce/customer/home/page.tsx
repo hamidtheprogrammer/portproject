@@ -105,6 +105,44 @@ const page = () => {
           </span>
           <ProductCarousel products={[...productsSeed.reverse()]} />
         </div>
+        <div className="mt-10">
+          <span className="flex justify-between">
+            <h1 className="underline_heading relative w-fit pb-3 text-2xl font-medium">
+              Popular
+            </h1>
+            <p className="text-blue-500 font-medium hover:underline cursor-pointer">
+              Explore {">"}
+            </p>
+          </span>
+          <ProductCarousel products={[...productsSeed.reverse()]} />
+        </div>
+      </div>
+      <div className="flex max-md:flex-col mb-16 justify-center items-center gap-14 max-sm:px-5 sm:px-[6rem] md:px-[6%]">
+        <div>
+          <img
+            className="max-h-[15rem]"
+            src="/lottie/ManSitting.png"
+            alt="image"
+          />
+        </div>
+        <div>
+          <h1 className="text-2xl text-blue-950 font-bold">
+            Keep in touch with us
+          </h1>
+          <p className="text-sm text-blue-950/50">
+            Subscribe to our newsletter
+          </p>
+          <span className="flex max-sm:flex-col gap-4 mt-6">
+            <input
+              className="border-[1px] rounded-md max-sm:w-full h-8 w-72 pl-6 text-xs outline-none"
+              placeholder="Email"
+              type="text"
+            />
+            <button className="bg-blueish h-8 flex items-center justify-center max-sm:w-full text-white rounded-md px-8 text-xs">
+              Subscribe
+            </button>
+          </span>
+        </div>
       </div>
       <Footer />
     </section>

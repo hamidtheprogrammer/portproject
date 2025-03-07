@@ -3,7 +3,7 @@ import React from "react";
 import Header from "../products-filtering/components/Header";
 import Footer from "../products-filtering/components/Footer";
 import { productsSeed } from "../products-filtering";
-import { DeleteIcon } from "@/app/svg";
+import { DeleteIcon, HomeIcon } from "@/app/svg";
 
 const page = () => {
   const dumbTotal = productsSeed
@@ -14,13 +14,11 @@ const page = () => {
       className={`fixed inset-0 overflow-y-auto w-full z-[99999] bg-primaryBg flex flex-col justify-between`}
     >
       <Header />
-      <main className="flex-1 px-16 py-8 mb-20">
-        <a
-          href="##"
-          className="text-blue-400 hover:text-blue-500 underline text-xs font-medium"
-        >
-          home
-        </a>
+      <main className="flex-1 px-3 md:px-16 py-8 mb-20">
+        <span className="flex items-center text-sm font-medium gap-2">
+          <HomeIcon height="15" width="15" />
+          {">"} <p>Products</p>
+        </span>
         <h1 className="font-bold text-2xl mt-2 mb-6">Cart</h1>
         <div className="flex justify-between max-lg:flex-col max-lg:gap-5">
           <span className="overflow-x-auto scrollBar">

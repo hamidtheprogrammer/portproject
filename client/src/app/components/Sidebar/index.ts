@@ -104,6 +104,7 @@ export const navItems: INav[] = [
         tags: ["travel", "portfolio"],
         title: "Portfolio",
         link: "/travel/portfolio",
+        blank: true,
       },
     ],
   },
