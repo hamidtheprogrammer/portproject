@@ -60,7 +60,7 @@ const ProductCarousel = ({ products }: { products: IProduct[] }) => {
           <li
             style={{ transform: `translateX(${offset * 100}%)` }}
             key={prod.title}
-            className={`relative max-sm:w-[107.5%] sm:w-[52.2%] md:w-[34.35%] lg:w-[25.45%] flex-shrink-0 flex-grow-0 transition-all duration-500 product-itm h-[20rem] ${
+            className={`relative max-sm:w-[calc(100%+1.5rem)] sm:w-[calc(50%+0.75rem)] md:w-[calc(33.333%+0.5rem)] lg:w-[calc(25%+0.375rem)] flex-shrink-0 flex-grow-0 transition-all duration-500 product-itm h-[20rem] ${
               idx !== products.length - 1
             } pr-6`}
           >
