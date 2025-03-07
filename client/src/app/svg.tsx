@@ -53,33 +53,6 @@ export const UserIcon = ({
   );
 };
 
-export const BasketIcon = ({
-  height,
-  width,
-  strokeWidth = 1,
-}: {
-  height: string;
-  width: string;
-  strokeWidth: number;
-}) => {
-  return (
-    <svg
-      width={width}
-      height={height}
-      viewBox="0 0 22 19"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="secondaryText dark:darkSecondaryText"
-    >
-      <path
-        d="M15.7942 7.27764L15.9426 7.5H16.21H21C21.2662 7.5 21.4873 7.71363 21.4995 7.97707L21.4774 8.17575L18.9492 17.4026C18.949 17.4034 18.9488 17.4043 18.9485 17.4051C18.7667 18.0374 18.1875 18.5 17.5 18.5H4.5C3.81066 18.5 3.23418 18.0359 3.06225 17.408L3.06223 17.4079L0.522225 8.13787L0.512245 8.10144L0.501736 8.0778C0.50127 8.07299 0.500761 8.06544 0.500432 8.05362C0.500032 8.03921 0.5 8.02366 0.5 8C0.5 7.72614 0.726142 7.5 1 7.5H5.79H6.05714L6.20563 7.27794L10.5856 0.727936L10.5857 0.727948L10.5882 0.724013C10.6827 0.579881 10.8427 0.5 11 0.5C11.1587 0.5 11.3211 0.581381 11.4154 0.719524C11.4157 0.719932 11.416 0.720341 11.4163 0.720751L15.7942 7.27764ZM11.416 2.52265L11 1.89861L10.584 2.52265L7.78397 6.72265L7.26574 7.5H8.2H13.8H14.7343L14.216 6.72265L11.416 2.52265ZM17.5 17.5H17.8811L17.9821 17.1326L20.1821 9.13258L20.3561 8.5H19.7H2.31H1.65473L1.82774 9.13202L4.01774 17.132L4.11848 17.5H4.5H17.5ZM9.5 13C9.5 12.1761 10.1761 11.5 11 11.5C11.8239 11.5 12.5 12.1761 12.5 13C12.5 13.8239 11.8239 14.5 11 14.5C10.1761 14.5 9.5 13.8239 9.5 13Z"
-        stroke="currentColor"
-        strokeWidth={strokeWidth}
-      />
-    </svg>
-  );
-};
-
 export const StarIcon = ({
   height,
   width,
@@ -500,6 +473,35 @@ export const MenuIcon = ({
         stroke="black"
         strokeWidth={strokeWidth}
       />
+    </svg>
+  );
+};
+
+export const BasketIcon = ({
+  height,
+  width,
+  strokeWidth = 1,
+}: {
+  height: string;
+  width: string;
+  strokeWidth?: number;
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 120 74"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="text-black/60"
+      strokeWidth={strokeWidth}
+    >
+      <path
+        d="M4.76454 24.5H115.235C118.468 24.5 120.578 28.2049 118.927 31.2419L100.374 65.3635C97.6342 70.4032 92.5438 73.5 87.0448 73.5H32.9553C27.4562 73.5 22.3658 70.4032 19.6256 65.3635L1.07313 31.2419C-0.578127 28.2049 1.53204 24.5 4.76454 24.5Z"
+        stroke="currentColor"
+      />
+      <circle cx="60" cy="25" r="1" fill="currentColor" />
+      <path d="M59 25L99 1" stroke="currentColor" />
     </svg>
   );
 };

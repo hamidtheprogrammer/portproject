@@ -8,9 +8,14 @@ const page = () => {
   return (
     <section className="fixed inset-0 z-[999] bg-primaryBg overflow-y-auto">
       <Header />
-      <div className="px-10 py-8 max-lg:px-7 max-lg:py-5 max-sm:px-5 max-sm:py-3 mb-16">
+      <div className="px-8 py-8 max-lg:px-7 max-lg:py-5 max-sm:px-3 max-sm:py-3 mb-16">
         <div className="grid grid-cols-4 grid-rows-2 gap-3 min-h-[36rem] max-lg:grid-rows-4 max-lg:min-h-[60rem] max-sm:min-h-[80rem] max-sm:grid-rows-6 py-3">
           <span className="relative flex flex-col space-y-4 justify-center pl-[8%] rounded-xl max-lg:col-span-4 col-span-2 row-span-2 bg-[#FBE3D7]">
+            <img
+              className="opacity-40 absolute inset-0 h-full w-full object-cover rounded-xl"
+              src="https://images.unsplash.com/photo-1637611331620-51149c7ceb94?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
             <h1 className="text-2xl font-semibold z-[2] max-w-[70%]">
               Get 50% off on eligible items
             </h1>
@@ -29,6 +34,11 @@ const page = () => {
             />
           </span>
           <span className="relative flex flex-col justify-center pl-[8%] rounded-xl bg-[#BDE3D8] max-lg:col-span-2 max-sm:col-span-4">
+            <img
+              className="opacity-60 absolute inset-0 h-full w-full object-cover rounded-xl"
+              src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=1424&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
             <h1 className="text-2xl font-semibold z-[2] max-w-[70%]">Gaming</h1>
             <p className="text-sm text-black/50 z-[2] max-w-[70%]">150 items</p>
             <button className="underline_button mt-2 relative w-fit font-medium z-[2]">
@@ -41,6 +51,11 @@ const page = () => {
             />
           </span>
           <span className="relative flex flex-col justify-center pl-[8%] rounded-xl bg-[#D4D4EE] max-lg:col-span-2 max-sm:col-span-4">
+            <img
+              className="opacity-40 absolute inset-0 h-full w-full object-cover rounded-xl"
+              src="https://images.unsplash.com/photo-1557683304-673a23048d34?q=80&w=1482&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
             <h1 className="text-2xl font-semibold z-[2] max-w-[50%]">
               Iphone 14 pro
             </h1>
@@ -55,6 +70,11 @@ const page = () => {
             />
           </span>
           <span className="relative flex flex-col justify-center pl-[8%] rounded-xl bg-[#FCDCE1] max-lg:col-span-2 max-sm:col-span-4">
+            <img
+              className="opacity-40 absolute inset-0 h-full w-full object-cover rounded-xl"
+              src="https://images.unsplash.com/photo-1516617442634-75371039cb3a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
             <h1 className="text-2xl font-semibold z-[2] max-w-[50%]">
               50% off Gift items
             </h1>
