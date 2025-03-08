@@ -65,7 +65,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative z-[9999] h-full max-sm:min-h-[120vh]">
+    <div className="relative z-[9999] h-full max-sm:min-h-[calc(100%+70px)]">
       {bgLoc.map((bg, idx) => (
         <div
           key={bg.place}
@@ -82,7 +82,7 @@ const Hero = () => {
           />
         </div>
       ))}
-      <section className="relative  text-white h-full z-40">
+      <section className="relative text-white h-full z-40">
         <div className="relative top-[20%] sm:left-[6rem] md:left-[13%] w-fit flex flex-col max-sm:items-center max-sm:w-full max-sm:text-center gap-6">
           <p className="text-[0.65rem] tracking-[0.16rem]">
             FAMILY TRAVEL AGENCY

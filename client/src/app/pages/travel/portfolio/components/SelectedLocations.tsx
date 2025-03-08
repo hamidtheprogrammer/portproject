@@ -53,13 +53,6 @@ const SelectedLocations = () => {
   }
 
   useEffect(() => {
-    setInterval(() => {
-      // setIndex(IDirection.FORWARD);
-    }, 10000);
-  }, [currentImg]);
-
-  useEffect(() => {
-    // Reached cloned end, jump back to real first item
     setTimeout(() => {
       if (currentImg === 0) {
         (allow.current = true), setCurrentImg(1);
@@ -90,11 +83,14 @@ const SelectedLocations = () => {
           {bgLoc.map((itm, idx) => (
             <li
               style={{
-                transform: `translateX(-${itmWidth / 2}px)`,
+                transform:
+                  typeof window !== "undefined" && window.innerWidth > 900
+                    ? `translateX(-${itmWidth / 2}px)`
+                    : `translateX(-${itmWidth * 0.7 + 35}px)`,
               }}
               className={`relative ${
-                currentImg === idx - 1 ? "h-full" : "h-[40vh]"
-              } flex-shrink-0 flex-grow-0 overflow-hidden rounded-xl carousel-itm ${
+                currentImg === idx - 1 ? "h-full" : "md:h-[280px] h-[150px]"
+              } overflow-hidden rounded-xl carousel-itm ${
                 allow.current && "transition-all duration-1000"
               }`}
               key={idx}
@@ -112,7 +108,7 @@ const SelectedLocations = () => {
         </ul>
         <button
           onClick={() => setIndex(IDirection.BACKWARD)}
-          className="absolute top-1/2 -translate-y-1/2 -rotate-90 bg-white h-10 w-10 flex justify-center items-center rounded-[999]"
+          className="absolute top-1/2 -translate-y-1/2 -rotate-90 bg-white h-10 w-10 flex justify-center items-center rounded-[99px]"
         >
           <DropDownIcon
             height="20"
@@ -123,7 +119,7 @@ const SelectedLocations = () => {
         </button>
         <button
           onClick={() => setIndex(IDirection.FORWARD)}
-          className="absolute top-1/2 -translate-y-1/2 right-0 rotate-90 bg-white h-10 w-10 flex justify-center items-center rounded-[999]"
+          className="absolute top-1/2 -translate-y-1/2 right-0 rotate-90 bg-white h-10 w-10 flex justify-center items-center rounded-[99px]"
         >
           <DropDownIcon
             height="20"

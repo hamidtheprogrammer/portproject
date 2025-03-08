@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex max-md:flex-col items-center gap-14 max-sm:px-5 sm:px-[6rem] md:px-[6%]">
         <div>
           <img
-            className="max-h-[20rem]"
+            className="max-h-[15rem]"
             src="/lottie/ManSitting.png"
             alt="image"
           />

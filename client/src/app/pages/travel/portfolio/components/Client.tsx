@@ -36,6 +36,8 @@ const Client = () => {
   useEffect(() => {
     if (!ref.current || !innerRef.current) return;
 
+    if (window && window.innerWidth < 770) return;
+
     const outer = ref.current;
     const inner = innerRef.current;
 
@@ -92,7 +94,7 @@ const Client = () => {
               key={idx}
               className={`${
                 currentIndex !== idx && "text-white/30 border-white/30"
-              } border-[1px] rounded-[9999] h-10 w-10 flex justify-center items-center transition-all duration-500`}
+              } border-[1px] rounded-[99px] h-10 w-10 flex justify-center items-center transition-all duration-500`}
             >
               {idx + 1}
             </li>
@@ -108,7 +110,7 @@ const Client = () => {
           <div className="flex gap-3 mt-10">
             <button
               onClick={() => changeIndex(IDirection.BACKWARD)}
-              className="-rotate-90 bg-white h-12 w-12 flex justify-center items-center rounded-[999]"
+              className="-rotate-90 bg-white h-12 w-12 flex justify-center items-center rounded-[99px]"
             >
               <DropDownIcon
                 height="20"
@@ -119,7 +121,7 @@ const Client = () => {
             </button>
             <button
               onClick={() => changeIndex(IDirection.FORWARD)}
-              className="rotate-90 bg-white h-12 w-12 flex justify-center items-center rounded-[999]"
+              className="rotate-90 bg-white h-12 w-12 flex justify-center items-center rounded-[99px]"
             >
               <DropDownIcon
                 height="20"
@@ -142,14 +144,14 @@ const Client = () => {
           >
             <ul ref={innerRef} className="relative flex h-80 ">
               {travellerPhotos.map((photo, idx) => (
-                <li key={idx} className="relative group h-full">
+                <li key={idx} className="relative group max-md:w-full h-full">
                   <img
                     src={photo}
                     alt="image"
                     className="h-full min-w-[20rem] object-cover"
                   />
                   <div className="absolute max-md:opacity-100 opacity-0 group-hover:opacity-100 transition-all duration-200 bg-black/40 inset-0"></div>
-                  <p className="absolute max-md:opacity-100 text-white text-[0.65rem] tracking-[0.16rem] border-[1px] border-white h-16 w-16 flex justify-center items-center rounded-[999] left-1/2 -translate-x-1/2 top-3/4 opacity-0 group-hover:opacity-100 md:group-hover:-translate-y-full transition-all duration-500 cursor-pointer">
+                  <p className="absolute max-md:opacity-100 text-white text-[0.65rem] tracking-[0.16rem] border-[1px] border-white h-16 w-16 flex justify-center items-center rounded-[99px] left-1/2 -translate-x-1/2 top-3/4 opacity-0 group-hover:opacity-100 md:group-hover:-translate-y-full transition-all duration-500 cursor-pointer">
                     view
                   </p>
                 </li>

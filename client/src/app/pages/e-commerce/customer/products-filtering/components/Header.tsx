@@ -1,11 +1,5 @@
 "use client";
-import {
-  BasketIcon,
-  BellIcon,
-  LocationIcon2,
-  MenuIcon,
-  UserIcon,
-} from "@/app/svg";
+import { BasketIcon, LocationIcon2, MenuIcon, UserIcon } from "@/app/svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
@@ -51,7 +45,7 @@ const Header = () => {
               />
               <input
                 type="text"
-                className="border-[1px] dark:bg-darkSecondaryBg dark:darkBorder rounded-full w-96 h-8 sm:text-xs pl-8 focus:outline-none"
+                className="border-[1px] dark:bg-darkSecondaryBg dark:darkBorder rounded-full w-96 h-8 md:text-xs pl-8 focus:outline-none"
                 placeholder="Search our products..."
               />
             </div>
@@ -143,7 +137,7 @@ const Header = () => {
           />
           <input
             type="text"
-            className="border-[1px] dark:bg-darkSecondaryBg dark:darkBorder rounded-full w-full h-8 text-xs pl-8 focus:outline-none"
+            className="border-[1px] dark:bg-darkSecondaryBg dark:darkBorder rounded-full w-full h-8 md:text-xs pl-8 focus:outline-none"
             placeholder="Search our products..."
           />
         </div>

@@ -88,7 +88,7 @@ const ProductList = () => {
                     <img
                       src={product.image}
                       alt="image"
-                      className=" object-cover"
+                      className="object-cover max-h-full"
                     />
                   </div>
                 </Link>
