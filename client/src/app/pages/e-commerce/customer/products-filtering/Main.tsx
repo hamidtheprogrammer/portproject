@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import Header from "./components/Header";
 import Filter from "./components/Filter";
 import ProductList from "./components/ProductList";
@@ -9,6 +9,9 @@ import Footer from "./components/Footer";
 const Main = () => {
   const [isFullScreen, setIsFullScreen] = useState(true);
   const { setOpenFilter, openFilter } = useContext(ProductContext);
+  const filterRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {}, []);
 
   return (
     <div
@@ -17,9 +20,13 @@ const Main = () => {
       } bg-primaryBg `}
     >
       <div
+        onClick={(e) => {
+          !filterRef.current?.contains(e.target as HTMLDivElement) &&
+            setOpenFilter(false);
+        }}
         className={`${
           !openFilter && "hidden"
-        } p-3 fixed h-full w-full bg-black/20 z-[9999] flex justify-start lg:hidden`}
+        } p-3 fixed h-full w-full bg-black/20 z-[9999] flex justify-start lg:hidden `}
       >
         <button
           onClick={() => setOpenFilter(false)}
@@ -27,7 +34,9 @@ const Main = () => {
         >
           x
         </button>
-        <Filter />
+        <div ref={filterRef}>
+          <Filter />
+        </div>
       </div>
       <Header />
       <div className="relative flex px-8 py-5 gap-9 min-h-[300vh]d">

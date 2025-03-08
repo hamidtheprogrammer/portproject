@@ -93,7 +93,7 @@ const OrderTracking = () => {
               <li className="flex gap-4">
                 <div className={`flex flex-col items-center `}>
                   <div
-                    className={`h-6 w-6 bg-gray-200 rounded-[9999] ${
+                    className={`h-6 w-6 bg-gray-200 rounded-[99px] ${
                       stage.time !== "pending" && "bg-green-600"
                     }`}
                   ></div>

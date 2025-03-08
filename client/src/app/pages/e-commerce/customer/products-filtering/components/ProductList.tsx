@@ -138,7 +138,7 @@ const ProductList = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-4 flex flex-col gap-4">
+              <div className="mt-4 flex flex-col gap-4 product_lg:hidden">
                 <button className="text-sm h-8 rounded-lg w-full border-[#4039be] text-[#4039be] border-[1px] hover:first-line:opacity-70">
                   View product
                 </button>

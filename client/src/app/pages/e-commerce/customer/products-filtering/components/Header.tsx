@@ -8,20 +8,22 @@ import {
 } from "@/app/svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const navList = [
-  "Home",
-  "Products",
-  "Wishlist",
-  "Shipping Info",
-  "Track order",
-  "Checkout",
+  { name: "Home", link: "/pages/e-commerce/customer/home" },
+  { name: "Products", link: "/pages/e-commerce/customer/products-filtering" },
+  // { name: "Wishlist", link: "/pages/e-commerce/customer/cart" },
+  // "Shipping Info",
+  { name: "Track order", link: "/pages/e-commerce/customer/order-tracking" },
+  { name: "Checkout", link: "/pages/e-commerce/customer/cart" },
 ];
 
 const Header = () => {
-  const path = usePathname().split("/");
+  const path = usePathname();
   const [isLeftNavOpen, setIsLeftBarOpen] = useState<boolean>(false);
+
+  const sideNavRef = useRef<HTMLDivElement>(null);
 
   return (
     <header className="dark:darkSecondaryText inset-0 dark:bg-darkSecondaryBg bg-white dark:darkBorder border-b-[1px] flex flex-col gap-3 justify-center md:h-20 lg:h-32 h-32 px-3 sm:px-8">
@@ -34,9 +36,11 @@ const Header = () => {
             >
               <MenuIcon height="20" width="20" />
             </button>
-            <div className="flex max-sm:h-12 h-14 lg:min-h-20 items-center justify-center aspect-square bg-[#4039be] rounded-[99px]">
-              <img src="/logo2.svg" alt="image" className="h-6" />
-            </div>
+            <Link href={"/pages/e-commerce/customer/home"}>
+              <div className="flex max-sm:h-12 h-14 lg:min-h-20 items-center justify-center aspect-square bg-[#4039be] rounded-[99px]">
+                <img src="/logo2.svg" alt="image" className="h-6" />
+              </div>
+            </Link>
           </div>
           <div className="flex flex-col gap-4">
             <div className="relative flex items-center max-md:hidden">
@@ -47,7 +51,7 @@ const Header = () => {
               />
               <input
                 type="text"
-                className="border-[1px] dark:bg-darkSecondaryBg dark:darkBorder rounded-full w-96 h-8 text-xs pl-8 focus:outline-none"
+                className="border-[1px] dark:bg-darkSecondaryBg dark:darkBorder rounded-full w-96 h-8 sm:text-xs pl-8 focus:outline-none"
                 placeholder="Search our products..."
               />
             </div>
@@ -56,21 +60,28 @@ const Header = () => {
                 {navList.map((li) => (
                   <li
                     className={`relative cursor-pointer pb-1 ${
-                      path[path.length - 1].toLowerCase() ===
-                        li.toLowerCase() && "underline_button"
+                      path.toLowerCase() === li.link.toLowerCase() &&
+                      "underline_button"
                     }`}
-                    key={li}
+                    key={li.name}
                   >
-                    {li}
+                    <Link href={li.link}>{li.name}</Link>
                   </li>
                 ))}
               </ul>
               <div
+                onClick={(e) => {
+                  !sideNavRef.current?.contains(e.target as HTMLDivElement) &&
+                    setIsLeftBarOpen(false);
+                }}
                 className={`${
                   !isLeftNavOpen && "hidden"
                 } fixed bg-black/20 z-[999] inset-0`}
               >
-                <div className="bg-white w-[18rem] h-full pt-5">
+                <div
+                  ref={sideNavRef}
+                  className="bg-white w-[18rem] h-full pt-5"
+                >
                   <span className="flex justify-between px-4">
                     <h1>LOGO</h1>
                     <button
@@ -86,12 +97,12 @@ const Header = () => {
                     {navList.map((li) => (
                       <li
                         className={`relative cursor-pointer pb-1 w-fit ${
-                          path[path.length - 1].toLowerCase() ===
-                            li.toLowerCase() && "underline_button"
+                          path.toLowerCase() === li.link.toLowerCase() &&
+                          "underline_button"
                         }`}
-                        key={li}
+                        key={li.name}
                       >
-                        {li}
+                        <Link href={li.link}>{li.name}</Link>
                       </li>
                     ))}
                   </ul>

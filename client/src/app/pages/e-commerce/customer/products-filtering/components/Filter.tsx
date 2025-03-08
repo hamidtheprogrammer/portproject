@@ -89,7 +89,7 @@ const Filter = () => {
   return (
     <div className="bg-white rounded-lg shadow-[0_0_5px_rgba(0,0,0,0.1)] ">
       <h1 className="border-b-[1px] py-3 pl-5 font-semibold">Filters</h1>
-      <ul className="h-[85vh] overflow-y-auto scrollBar">
+      <ul className="h-[85vh] overflow-y-auto scrollBar max-xs:pb-10">
         {filterOptions.map((filter) => (
           <li className="border-b-[1px] px-3 mt-6 pb-6" key={filter.name}>
             <h1 className="text-sm font-semibold mb-2 capitalize">

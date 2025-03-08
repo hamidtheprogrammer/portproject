@@ -57,7 +57,7 @@ const RecentPurchases = () => {
             onChange={(e) => setSearchParameter(e.target.value)}
             value={searchParameter}
             type="text"
-            className="border-[1px] dark:bg-darkSecondaryBg dark:darkBorder rounded-md w-80 h-8 text-xs pl-8 focus:outline-none"
+            className="border-[1px] dark:bg-darkSecondaryBg dark:darkBorder rounded-md w-80 h-8 sm:text-xs pl-8 focus:outline-none"
             placeholder="Search..."
           />
         </div>
