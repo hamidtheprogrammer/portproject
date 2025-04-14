@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import Link from "next/link";
 
 const Discover = () => {
   return (
@@ -18,9 +20,11 @@ const Discover = () => {
           experiences, every moment of your journey will be filled with
           excitement and ease.
         </p>
-        <button className="text-[0.65rem] tracking-[0.16rem] text-white flex justify-between items-center h-12 w-fit px-8 bg-blueish/90 rounded-md">
-          SEE OUR DESTINATIONS
-        </button>
+        <Link href={"/pages/travel/hotel/customer/home"}>
+          <button className="text-[0.65rem] tracking-[0.16rem] text-white flex justify-between items-center h-12 w-fit px-8 bg-blueish/90 rounded-md">
+            SEE OUR DESTINATIONS
+          </button>
+        </Link>
       </div>
       <div className="flex-1 rounded-md w-full lg:aspect-square">
         <img

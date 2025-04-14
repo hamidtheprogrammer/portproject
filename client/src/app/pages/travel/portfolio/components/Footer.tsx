@@ -5,11 +5,7 @@ const Footer = () => {
     <section className="relative pt-4 lg:pt-6 max-md:w-full w-[calc(100%-5rem)]  md:left-20">
       <div className="flex max-md:flex-col items-center gap-14 max-sm:px-5 sm:px-[6rem] md:px-[6%]">
         <div>
-          <img
-            className="max-h-[15rem]"
-            src="/lottie/ManSitting.png"
-            alt="image"
-          />
+          <img className="max-h-[15rem]" src="/travel/home.jpg" alt="image" />
         </div>
         <div>
           <h1 className="text-2xl text-blue-950 font-bold">

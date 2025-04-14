@@ -41,7 +41,6 @@ const OrdersChart = () => {
                 width: "150px",
                 height: "80px",
                 fontSize: "12px",
-
                 borderRadius: "8px",
                 border: "1px solid #ccc",
                 padding: "10px",

@@ -20,6 +20,69 @@ export const navItems: INav[] = [
         title: "E-commerce",
         link: "/dashboards/e-commerce",
       },
+      {
+        tags: ["dashboards", "travel"],
+        title: "Travel",
+        link: "/dashboards/travel",
+      },
+    ],
+  },
+  {
+    tags: ["travel"],
+    title: "Travel",
+    icon: "DashboardIcon.svg",
+    isOpen: false,
+    subItems: [
+      {
+        tags: ["travel", "portfolio"],
+        title: "Portfolio",
+        link: "/travel/portfolio",
+        blank: true,
+      },
+      {
+        tags: ["travel", "hotel"],
+        title: "Hotel",
+        isOpen: false,
+        subItems: [
+          {
+            tags: ["travel", "hotel", "customer"],
+            title: "Customer",
+            isOpen: false,
+            subItems: [
+              {
+                tags: ["travel", "hotel", "customer", "home"],
+                title: "Home",
+                link: "/travel/hotel/customer/home",
+                blank: true,
+              },
+              {
+                tags: ["travel", "hotel", "customer", "hotels"],
+                title: "Hotels Filter",
+                link: "/travel/hotel/customer/hotels-filter",
+                blank: true,
+              },
+              {
+                tags: ["travel", "hotel", "customer", "hotels-map-view"],
+                title: "Hotels Map view",
+                link: "/travel/hotel/customer/hotels-map-view",
+                blank: true,
+              },
+              {
+                tags: ["travel", "hotel", "customer", "hotel-details"],
+                title: "Hotel details",
+                link: "/travel/hotel/customer/hotel-details/1",
+                blank: true,
+              },
+              {
+                tags: ["travel", "hotel", "customer", "checkout"],
+                title: "Hotel Checkout",
+                link: "/travel/hotel/customer/checkout/1",
+                blank: true,
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
@@ -95,16 +158,20 @@ export const navItems: INav[] = [
     ],
   },
   {
-    tags: ["travel"],
-    title: "Travel",
+    tags: ["UI"],
+    title: "UI",
     icon: "DashboardIcon.svg",
     isOpen: false,
     subItems: [
       {
-        tags: ["travel", "portfolio"],
-        title: "Portfolio",
-        link: "/travel/portfolio",
-        blank: true,
+        tags: ["UI", "custom-dnd"],
+        title: "Custom drag and drop",
+        link: "/UI/custom-dnd",
+      },
+      {
+        tags: ["UI", "react-pdf"],
+        title: "React PDF",
+        link: "/UI/react-pdf",
       },
     ],
   },

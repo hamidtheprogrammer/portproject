@@ -64,13 +64,13 @@ const Accordion: React.FC<IAccordion> = ({ navItems }) => {
                 />
               )
             )}
-            {itm.icon && (
+            {/* {itm.icon && (
               <img
                 src="/DashboardIcon.svg"
                 className="opacity-40 w-3"
                 alt="Dashboard"
               />
-            )}
+            )} */}
             <p
               className={` ${
                 tags.length > 0 &&

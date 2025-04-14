@@ -95,7 +95,7 @@ const SelectedLocations = () => {
               }`}
               key={idx}
             >
-              <div className="absolute z-[98] inset-0 gradient_overlay"></div>
+              <div className="absolute z-[98] rounded-xl inset-0 gradient_overlay"></div>
               <h1 className="z-[99] absolute text-2xl font-semibold bottom-[10%] left-1/2 -translate-x-1/2 text-white uppercase">
                 {itm.place}
               </h1>

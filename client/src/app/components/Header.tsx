@@ -42,12 +42,10 @@ const Header = () => {
         >
           <MenuIcon height="24" width="24" />
         </div>
-        <Link href={"/"}>
-          <img
-            className="cursor-pointer flex-grow-0 max-h-[3rem]"
-            src="/Logo.png"
-            alt="logo"
-          />
+        <Link href={"/pages/e-commerce/customer/home"}>
+          <div className="flex h-12 items-center justify-center aspect-square bg-[#2e27b1] rounded-[99px]">
+            <img src="/logo2.svg" alt="image" className="h-6" />
+          </div>
         </Link>
       </div>
       <div className="relative flex items-center max-md:hidden">
@@ -68,26 +66,7 @@ const Header = () => {
           src="/SearchIcon.svg"
           alt="search"
         />
-        {theme === ITheme.LIGHT ? (
-          <img
-            onClick={() => {
-              setTheme(ITheme.DARK), localStorage.setItem("theme", ITheme.DARK);
-            }}
-            src="/SunIcon.svg"
-            alt="sun"
-            className="cursor-pointer hover:scale-110"
-          />
-        ) : (
-          <img
-            onClick={() => {
-              setTheme(ITheme.LIGHT),
-                localStorage.setItem("theme", ITheme.LIGHT);
-            }}
-            src="/MoonIcon.svg"
-            alt="moon"
-            className="cursor-pointer hover:scale-110"
-          />
-        )}
+
         <img
           src="/BellIcon.svg"
           alt="bell"
