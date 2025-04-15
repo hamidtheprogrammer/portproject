@@ -10,9 +10,9 @@ const Sidebar = () => {
 
   return (
     <>
-      <section className="fixed dark:darkSecondaryText dark:darkBorder secondaryText text-xs px-4 pt-8 left-0 bottom-0 h-[90%] w-[15.5rem] dark:bg-darkSecondaryBg bg-white border-r-[1px] max-lg:hidden">
+      <section className="fixed dark:darkSecondaryText overflow-y-auto dark:darkBorder secondaryText text-xs px-4 pt-8 left-0 bottom-0 h-[90%] w-[15.5rem] dark:bg-darkSecondaryBg bg-white border-r-[1px] max-lg:hidden">
         <h1 className="mb-4">Pages</h1>
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2 ">
           <Accordion navItems={navItems} />
         </ul>
       </section>
