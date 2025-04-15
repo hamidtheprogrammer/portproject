@@ -17,7 +17,7 @@ const Sidebar = () => {
         </ul>
       </section>
       <section
-        className={`z-[999] fixed secondaryText dark:bg-darkSecondaryBg dark:darkSecondaryText text-xs px-4 left-0 top-[10%] overflow-hidden w-full ${
+        className={`z-[999] fixed secondaryText overflow-y-auto dark:bg-darkSecondaryBg dark:darkSecondaryText text-xs px-4 left-0 top-[10%] overflow-hidden w-full ${
           isSideBarOpen ? "h-[90%]" : "h-0"
         } bg-white  border-r-[1px] lg:hidden transition-all duration-300`}
       >

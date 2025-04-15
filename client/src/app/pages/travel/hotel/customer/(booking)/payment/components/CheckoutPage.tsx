@@ -15,7 +15,7 @@ const CheckoutForm = ({ amount }: { amount: number }) => {
   const [secret, setSecret] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/api/checkout", {
+    fetch("https://portproject-eight.vercel.app/api/checkout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount: amount * 100 }), // Convert to cents

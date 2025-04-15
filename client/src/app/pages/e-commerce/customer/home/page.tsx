@@ -45,9 +45,12 @@ const page = () => {
             />
             <h1 className="text-2xl font-semibold z-[2] max-w-[70%]">Gaming</h1>
             <p className="text-sm text-black/50 z-[2] max-w-[70%]">150 items</p>
-            <button className="underline_button mt-2 relative w-fit font-medium z-[2]">
+            <Link
+              href={"/pages/e-commerce/customer/products-filtering"}
+              className="underline_button relative w-fit font-medium z-[2]"
+            >
               SHOP NOW
-            </button>
+            </Link>
             <img
               src="/Ps5Banner.png"
               alt="Banner image"
@@ -64,9 +67,12 @@ const page = () => {
               Iphone 14 pro
             </h1>
             <p className="text-sm text-black/50 z-[2] max-w-[70%]">Oh so pro</p>
-            <button className="underline_button mt-2 relative w-fit font-medium z-[2]">
+            <Link
+              href={"/pages/e-commerce/customer/products-filtering"}
+              className="underline_button relative w-fit font-medium z-[2]"
+            >
               SHOP NOW
-            </button>
+            </Link>
             <img
               src="/Iphone14Banner.png"
               alt="Banner image"
@@ -83,9 +89,12 @@ const page = () => {
               50% off Gift items
             </h1>
             <p className="text-sm text-black/50 z-[2] max-w-[70%]">wow!</p>
-            <button className="underline_button mt-2 relative w-fit font-medium z-[2]">
+            <Link
+              href={"/pages/e-commerce/customer/products-filtering"}
+              className="underline_button relative w-fit font-medium z-[2]"
+            >
               SHOP NOW
-            </button>
+            </Link>
             <img
               src="/GiftBanner.png"
               alt="Banner image"
@@ -97,9 +106,12 @@ const page = () => {
               Home essentials
             </h1>
             <p className="text-sm text-black/50 z-[2] max-w-[70%]">350 items</p>
-            <button className="underline_button mt-2 relative w-fit font-medium z-[2]">
+            <Link
+              href={"/pages/e-commerce/customer/products-filtering"}
+              className="underline_button relative w-fit font-medium z-[2]"
+            >
               SHOP NOW
-            </button>
+            </Link>
             <img
               src="/WashingMBanner.png"
               alt="Banner image"
