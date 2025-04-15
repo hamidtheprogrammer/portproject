@@ -38,7 +38,7 @@ const CheckoutForm = ({ amount }: { amount: number }) => {
         elements,
         clientSecret: secret,
         confirmParams: {
-          return_url: `http://localhost:3000/pages/travel/hotel/customer/payment-successful?amount=${amount}`,
+          return_url: `https://portproject-eight.vercel.app/pages/travel/hotel/customer/payment-successful?amount=${amount}`,
         },
       });
 
