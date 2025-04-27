@@ -42,7 +42,7 @@ const Header = () => {
         >
           <MenuIcon height="24" width="24" />
         </div>
-        <Link href={"/pages/e-commerce/customer/home"}>
+        <Link href={"/pages/dashboards/e-commerce"}>
           <div className="flex h-12 items-center justify-center aspect-square bg-[#2e27b1] rounded-[99px]">
             <img src="/logo2.svg" alt="image" className="h-6" />
           </div>
