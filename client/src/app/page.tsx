@@ -4,6 +4,6 @@ import { useEffect } from "react";
 export default function Home() {
   const router = useRouter();
 
-  useEffect(() => router.push("/pages/dashboards/travel"), []);
+  useEffect(() => router.push("/pages/dashboards/e-commerce"), []);
   return <div>Hello</div>;
 }
