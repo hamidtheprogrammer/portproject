@@ -157,22 +157,22 @@ export const navItems: INav[] = [
       },
     ],
   },
-  {
-    tags: ["UI"],
-    title: "UI",
-    icon: "DashboardIcon.svg",
-    isOpen: false,
-    subItems: [
-      {
-        tags: ["UI", "custom-dnd"],
-        title: "Custom drag and drop",
-        link: "/UI/custom-dnd",
-      },
-      {
-        tags: ["UI", "react-pdf"],
-        title: "React PDF",
-        link: "/UI/react-pdf",
-      },
-    ],
-  },
+  // {
+  //   tags: ["UI"],
+  //   title: "UI",
+  //   icon: "DashboardIcon.svg",
+  //   isOpen: false,
+  //   subItems: [
+  //     {
+  //       tags: ["UI", "custom-dnd"],
+  //       title: "Custom drag and drop",
+  //       link: "/UI/custom-dnd",
+  //     },
+  //     {
+  //       tags: ["UI", "react-pdf"],
+  //       title: "React PDF",
+  //       link: "/UI/react-pdf",
+  //     },
+  //   ],
+  // },
 ];
